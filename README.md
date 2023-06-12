@@ -1,5 +1,7 @@
 # Pinky Cyber Platform
 ## Documentaion
+This is not the official repository. Use it as a reference for your portfolio and please note that 
+not all resources were utilized, and it is not expected for interested users to enter personal data
 ### Dependencies
 
 * chart.js: Interactive charting library for visualizing data.
@@ -14,6 +16,8 @@
 * styled-components: Library for writing JavaScript styles for React components.
 
 ## Documentacion
+Este no es el repositorio oficial. Úselo como referencia para su portafolio y tenga en 
+cuenta que no se utilizaron todos los recursos, ni se espera que los usuarios interesados ingresen datos personales
 ### Dependencias 
 
 * chart.js: Biblioteca de gráficos interactivos para visualizar datos.
