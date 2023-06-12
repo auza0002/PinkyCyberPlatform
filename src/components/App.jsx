@@ -1,8 +1,14 @@
+import { Routes, Route } from "react-router-dom";
+import Navigation from "./routes/navigation/navigation";
+import DashBoard from "./routes/dashBoard/dashBoard";
+
 function App() {
   return (
-    <>
-      <h1>Hello there</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<DashBoard />} />
+      </Route>
+    </Routes>
   );
 }
 
