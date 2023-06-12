@@ -1,24 +1,40 @@
 /* eslint-disable no-unused-vars */
 // navigation
 
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+import "./navigation.styles.scss";
 const Navigation = () => {
   return (
-    <section>
-      <div>
-        <div>
+    <section className="container-nav">
+      <div className="second-container-nav">
+        <div className="container-touchID">
           <span className="material-symbols-outlined">fingerprint</span>
         </div>
         <nav>
-          <Link to="/" title="Link to go to the Dash Board page">
+          <NavLink to="/" title="Link to go to the Dash Board page">
             <span className="material-symbols-outlined">other_houses</span>
-          </Link>
-          <Link to="/client" title="Link to go to the Client page">
+          </NavLink>
+          <NavLink to="/client" title="Link to go to the Client page">
             <span className="material-symbols-outlined">group</span>
-          </Link>
-          <Link to="/network" title="Link to go to the Network page">
+          </NavLink>
+          <NavLink to="/network" title="Link to go to the Network page">
             <span className="material-symbols-outlined">schema</span>
-          </Link>
+          </NavLink>
+          <NavLink
+            to="/issues"
+            title="Link to go to the Issues Management page"
+          >
+            <span className="material-symbols-outlined">checklist</span>
+          </NavLink>
+          <NavLink to="/wiki" title="Link to go to the Wiki Management page">
+            <span className="material-symbols-outlined">calendar_today</span>
+          </NavLink>
+          <NavLink to="/payment" title="Link to go to the Payment page">
+            <span className="material-symbols-outlined">credit_card</span>
+          </NavLink>
+          <NavLink to="/settings" title="Link to go to the Settings page">
+            <span className="material-symbols-outlined">settings</span>
+          </NavLink>
         </nav>
       </div>
     </section>
