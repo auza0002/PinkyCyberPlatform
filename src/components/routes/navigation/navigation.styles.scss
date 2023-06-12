@@ -9,7 +9,7 @@
     & .container-touchID {
       display: flex;
       justify-content: center;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       & span {
         display: flex;
         justify-content: center;
@@ -45,6 +45,9 @@
         & span {
           color: rgba(164, 174, 184, 1);
         }
+      }
+      & .nav-profile {
+        margin-top: 2rem;
       }
     }
   }
