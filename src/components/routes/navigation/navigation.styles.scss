@@ -32,6 +32,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        &:hover {
+          & span {
+            color: rgba(62, 72, 82, 1);
+            transition: 0.3s ease-in-out;
+          }
+        }
         &.active {
           border-radius: 8px;
           width: 56px;
