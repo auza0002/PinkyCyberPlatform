@@ -1,8 +1,87 @@
+/* eslint-disable no-unused-vars */
+// navigation
+
+import { NavLink, Outlet } from "react-router-dom";
+import "./navigation.styles.scss";
+import { styled } from "@mui/material/styles";
+import Badge from "@mui/material/Badge";
+import Avatar from "@mui/material/Avatar";
+import profileWEBP from "../../../assets/images/profile.webp";
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    backgroundColor: "rgba(234, 56, 41, 1)",
+    color: "rgba(234, 56, 41, 1)",
+    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+    "&::after": {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      borderRadius: "50%",
+      border: "1px solid rgba(234, 56, 41, 1)",
+      content: '""',
+    },
+  },
+}));
+const profile = {
+  img: profileWEBP,
+  Name: "Diego Auza",
+  Age: "19",
+};
 const Navigation = () => {
   return (
-    <div>
-      <h2>helloo</h2>
-    </div>
+    <section className="container-nav">
+      <div className="second-container-nav">
+        <div className="container-touchID">
+          <span
+            style={{ userSelect: "none" }}
+            className="material-symbols-outlined"
+          >
+            fingerprint
+          </span>
+        </div>
+        <nav>
+          <NavLink to="/" title="Link to go to the Dash Board page">
+            <span className="material-symbols-outlined">other_houses</span>
+          </NavLink>
+          <NavLink to="/client" title="Link to go to the Client page">
+            <span className="material-symbols-outlined">group</span>
+          </NavLink>
+          <NavLink to="/network" title="Link to go to the Network page">
+            <span className="material-symbols-outlined">schema</span>
+          </NavLink>
+          <NavLink
+            to="/issues"
+            title="Link to go to the Issues Management page"
+          >
+            <span className="material-symbols-outlined">checklist</span>
+          </NavLink>
+          <NavLink to="/wiki" title="Link to go to the Wiki Management page">
+            <span className="material-symbols-outlined">calendar_today</span>
+          </NavLink>
+          <NavLink to="/payment" title="Link to go to the Payment page">
+            <span className="material-symbols-outlined">credit_card</span>
+          </NavLink>
+          <NavLink to="/settings" title="Link to go to the Settings page">
+            <span className="material-symbols-outlined">settings</span>
+          </NavLink>
+          <NavLink
+            className="nav-profile"
+            to="/profile"
+            title="Link to go to the Profile page"
+          >
+            <StyledBadge
+              overlap="circular"
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              variant="dot"
+            >
+              <Avatar alt={`User avatar ${profile.Name}`} src={profile.img} />
+            </StyledBadge>
+          </NavLink>
+        </nav>
+      </div>
+    </section>
   );
 };
 

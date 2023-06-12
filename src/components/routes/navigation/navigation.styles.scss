@@ -1,0 +1,60 @@
+.container-nav {
+  position: absolute;
+  padding-top: 2rem;
+
+  padding-bottom: 2rem;
+  .second-container-nav {
+    border-right: 1px solid rgba(225, 228, 231, 1);
+    height: 90vh;
+    & .container-touchID {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      & span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 30px;
+        background-color: white;
+        width: 56px;
+        height: 56px;
+        border-radius: 8px;
+      }
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      align-items: center;
+      & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          & span {
+            color: rgba(62, 72, 82, 1);
+            transition: 0.3s ease-in-out;
+          }
+        }
+        &.active {
+          border-radius: 8px;
+          width: 56px;
+          height: 56px;
+          color: rgba(62, 72, 82, 1);
+          background-color: rgba(225, 228, 231, 1);
+          & span {
+            color: rgba(62, 72, 82, 1);
+          }
+        }
+        & span {
+          color: rgba(164, 174, 184, 1);
+        }
+      }
+      & .nav-profile {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

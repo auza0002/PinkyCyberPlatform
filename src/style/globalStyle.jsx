@@ -73,6 +73,7 @@ select {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .material-symbols-outlined {
