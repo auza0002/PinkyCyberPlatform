@@ -1,1 +1,1 @@
-# PinkyCyberPlatform
+# Pinky Cyber Platform
