@@ -42,6 +42,26 @@ const theme = {
       Base100: "rgba(207, 210, 223, 1)",
       // to be used for background color on default stae secondary buttons.
     },
+    baseRed: {
+      Base900: "#28000B",
+      // TODO
+      Base800: "#500016",
+      // TODO
+      Base700: "#780022",
+      // TODO
+      Base600: "#A0002D",
+      // TODO
+      Base500: "#C80038",
+      // to be used for logotype secondary color or any other brand related assest like icons/
+      Base400: "#D33360",
+      // TODO
+      Base300: "#DE6688",
+      // TODO
+      Base200: "#E999AF",
+      // TODO
+      Base100: "#F4CCD7",
+      // TODO
+    },
   },
 };
 
