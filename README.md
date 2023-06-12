@@ -1,5 +1,20 @@
 # Pinky Cyber Platform
-## Dependencias 
+## Documentaion
+### Dependencies
+
+* chart.js: Interactive charting library for visualizing data.
+* localforage: Data storage library in the browser (IndexedDB, WebSQL, etc.).
+* match-sorter: Sorting and filtering functions for lists and tables.
+* react: JavaScript library for building interactive user interfaces.
+* react-chartjs-2: React component for integrating Chart.js into React applications.
+* react-dom: DOM manipulation library for React applications.
+* react-router-dom: Declarative router for single-page React applications.
+* sass: CSS preprocessor that makes writing and maintaining styles easier.
+* sort-by: Sorting functions for arrays and objects based on properties.
+* styled-components: Library for writing JavaScript styles for React components.
+
+## Documentacion
+### Dependencias 
 
 * chart.js: Biblioteca de gráficos interactivos para visualizar datos.
 * localforage: Biblioteca de almacenamiento de datos en el navegador (IndexedDB, WebSQL, etc.).
