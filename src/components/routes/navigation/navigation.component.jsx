@@ -39,10 +39,10 @@ const Navigation = () => {
   const [isToggled, setIsToggled] = useState(true);
   return (
     <Fragment>
-      <section className="container-nav">
+      <section className={`container-nav ${!isToggled ? "active" : ""}`}>
         <div className="second-container-nav">
           <span
-            className="button-toogle"
+            className={`button-toogle ${!isToggled ? "active" : ""}}`}
             onClick={() => {
               setIsToggled(!isToggled);
             }}
