@@ -10,6 +10,7 @@ import dataSVG from "../../../assets/images/data.svg";
 import taskSVG from "../../../assets/images/task.svg";
 import settingSVG from "../../../assets/images/setting.svg";
 import cardSVG from "../../../assets/images/card.svg";
+import touchIDSVG from "../../../assets/images/touchID.svg";
 import { NavLink, Outlet } from "react-router-dom";
 import { MainContainer } from "../../../style/style";
 import "./navigation.styles.scss";
@@ -60,12 +61,7 @@ const Navigation = () => {
             )}
           </span>
           <div className="container-touchID">
-            <span
-              style={{ userSelect: "none" }}
-              className="material-symbols-outlined"
-            >
-              fingerprint
-            </span>
+            <img src={touchIDSVG} alt="" />
           </div>
           <nav>
             <NavLink to="/" title="Link to go to the Dash Board page">

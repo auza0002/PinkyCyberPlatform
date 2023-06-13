@@ -14,17 +14,6 @@
       display: flex;
       justify-content: center;
       margin-bottom: 2rem;
-      & span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: black;
-        font-size: 30px;
-        background-color: white;
-        width: 56px;
-        height: 56px;
-        border-radius: 8px;
-      }
     }
     nav {
       display: flex;
