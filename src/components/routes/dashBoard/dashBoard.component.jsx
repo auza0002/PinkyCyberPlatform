@@ -47,7 +47,7 @@ const DashBoard = () => {
   };
   return (
     <>
-      <HeaderComponent links={links}>DashBoard</HeaderComponent>
+      <HeaderComponent links={""}>DashBoard</HeaderComponent>
 
       <section className="container-information">
         <div className="container-general-overview">
