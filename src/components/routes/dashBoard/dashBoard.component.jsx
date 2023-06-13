@@ -8,6 +8,7 @@ import shiledSearchSVG from "../../../assets/images/shiledSearch.svg";
 import tickCircle from "../../../assets/images/tickCircle.svg";
 import ticket from "../../../assets/images/ticket.svg";
 import ServerStatus from "./serverStatus/serverStatus.component";
+import { Link } from "react-router-dom";
 import "./dashBoard.styles.scss";
 
 const DashBoard = () => {
@@ -59,7 +60,24 @@ const DashBoard = () => {
             Status: GREEN
           </Button>
         </div>
-        <li>{console.log(serversStatus)}</li>
+        <ul>
+          {Object.keys(serversStatus).map((key) => (
+            <ServerStatus
+              key={key}
+              status={serversStatus[key].status}
+              number={serversStatus[key].number}
+              percentage={serversStatus[key].percentage}
+              totalPercentage={serversStatus[key].totalPercentage}
+            />
+          ))}
+          <li className="resources">
+            <div>
+              <p>Resources</p>
+            </div>
+            <p>{`${Object.keys(serversStatus).length} dedidated servers`}</p>
+            <Link to={"/"}>View more details</Link>
+          </li>
+        </ul>
       </section>
     </>
   );

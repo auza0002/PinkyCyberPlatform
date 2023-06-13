@@ -1,0 +1,56 @@
+li {
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    p {
+      margin: 0;
+    }
+    .server-status {
+      position: relative;
+      background: #f0f2f3;
+      border: 2px solid #f0f2f3;
+      border-radius: 6px;
+      width: 20px;
+      height: 20px;
+      &::after {
+        content: " ";
+        border-radius: 50%;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: red;
+        left: 20%;
+        top: 20%;
+      }
+      &.GREEN::after {
+        background: #0fb5ae;
+      }
+      &.YELLOW::after {
+        background: rgba(249, 178, 8, 1);
+      }
+      &.RED::after {
+        background: rgba(234, 56, 41, 1);
+      }
+    }
+  }
+  .percentage {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .total-percentange {
+    color: rgba(164, 174, 184, 1);
+    span {
+      font-weight: 800;
+    }
+  }
+}

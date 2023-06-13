@@ -2,9 +2,10 @@
   background: #ffffff;
   border: 1px solid #e1e4e7;
   border-radius: 16px;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 3fr 9fr;
   padding: 16px 8px 8px;
+
   & .container-general-overview {
     display: flex;
     flex-direction: column;
@@ -19,6 +20,43 @@
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
+      }
+    }
+  }
+  ul {
+    padding-right: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 2rem;
+    justify-content: space-between;
+    .resources {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      div {
+        p {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          margin-right: auto;
+        }
+      }
+      p {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 24px;
+        font-feature-settings: "tnum" on, "lnum" on;
+        color: #3e4852;
+      }
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        text-decoration-line: underline;
+        font-feature-settings: "tnum" on, "lnum" on;
+        color: #3892f3;
       }
     }
   }
