@@ -8,7 +8,7 @@ const DashBoard = () => {
   };
   return (
     <div>
-      <HeaderComponent links={links}>DashBoard</HeaderComponent>
+      <HeaderComponent links={""}>DashBoard</HeaderComponent>
 
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis numquam

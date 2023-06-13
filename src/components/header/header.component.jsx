@@ -2,11 +2,11 @@
 /* eslint-disable no-unused-vars */
 import logo from "../../assets/images/logo.svg";
 import { Link, NavLink, Outlet } from "react-router-dom";
-
+import "./header.styles.scss";
 const HeaderComponent = ({ children, links, overview }) => {
   return (
     <header className={`header-container`}>
-      <div className="container-text">
+      <div className="header-container-text">
         <h1>
           {children}
           {overview && <span>:{overview}</span>}
@@ -14,17 +14,22 @@ const HeaderComponent = ({ children, links, overview }) => {
         {Link && (
           <div className="container-links">
             {Object.keys(links).map((key) => (
-              <Link key={key} to={links[key]}>
-                {links[key].replace("", " / ")}
-              </Link>
+              <>
+                <span>
+                  /{" "}
+                  <Link key={key} to={links[key]}>
+                    {links[key].replace("", "")}
+                  </Link>
+                </span>
+              </>
             ))}
           </div>
         )}
-        <div className="container-logo">
-          <NavLink to="/">
-            <img src={logo} alt="Logo MGRINDER ( MG )" />
-          </NavLink>
-        </div>
+      </div>
+      <div className="header-container-logo">
+        <NavLink to="/">
+          <img src={logo} alt="Logo MGRINDER ( MG )" />
+        </NavLink>
       </div>
     </header>
   );
