@@ -73,6 +73,30 @@
       }
       ul {
         padding-right: 0;
+        .resources {
+          div {
+            p {
+              font-size: 12px;
+              line-height: 10px;
+            }
+          }
+          p {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 10px;
+            font-feature-settings: "tnum" on, "lnum" on;
+            color: #3e4852;
+          }
+          a {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 10px;
+            text-decoration-line: underline;
+            font-feature-settings: "tnum" on, "lnum" on;
+            color: #3892f3;
+          }
+        }
       }
     }
   }
