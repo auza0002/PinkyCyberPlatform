@@ -1,18 +1,21 @@
 .button-container {
-  min-width: 165px;
-  width: auto;
-  height: 50px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 15px;
-  background-color: black;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Open Sans Condensed";
-  font-weight: bolder;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 1);
   border: none;
-  cursor: pointer;
+  padding: 16px;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  &.btn-success {
+    background-color: rgba(15, 181, 174, 1);
+  }
+  &.btn-large {
+    justify-content: space-between;
+    width: 360px;
+  }
 }

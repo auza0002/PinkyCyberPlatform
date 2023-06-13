@@ -1,5 +1,13 @@
 /* eslint-disable no-unused-vars */
 import HeaderComponent from "../../header/header.component";
+import Button from "../../button/button.component";
+import calendarSVG from "../../../assets/images/calendar.svg";
+import flagSVG from "../../../assets/images/flag.svg";
+import flashCirleSVG from "../../../assets/images/flashCircle.svg";
+import shiledSearchSVG from "../../../assets/images/shiledSearch.svg";
+import tickCircle from "../../../assets/images/tickCircle.svg";
+import ticket from "../../../assets/images/ticket.svg";
+import "./dashBoard.styles.scss";
 
 const DashBoard = () => {
   const links = {
@@ -23,6 +31,14 @@ const DashBoard = () => {
         tempore. Eius esse nemo sequi eum sapiente quidem totam, labore quisquam
         laboriosam iste architecto? Ipsam ipsa eos perspiciatis quis?
       </p>
+      <Button
+        type="succes"
+        size="large"
+        position={"right"}
+        icons={<span className="material-symbols-outlined">add</span>}
+      >
+        Status: GREEN
+      </Button>
     </div>
   );
 };
