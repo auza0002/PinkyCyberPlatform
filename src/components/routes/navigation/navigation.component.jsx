@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 // navigation
 // responsive design
-
+import { useState } from "react";
+import arrowleft from "../../../assets/images/arrowLeft.svg";
+import arrowRight from "../../../assets/images/arrowRight.svg";
 import { NavLink, Outlet } from "react-router-dom";
 import { MainContainer } from "../../../style/style";
 import "./navigation.styles.scss";
@@ -34,10 +36,23 @@ const profile = {
   Age: "19",
 };
 const Navigation = () => {
+  const [isToggled, setIsToggled] = useState(true);
   return (
     <Fragment>
       <section className="container-nav">
         <div className="second-container-nav">
+          <span
+            className="button-toogle"
+            onClick={() => {
+              setIsToggled(!isToggled);
+            }}
+          >
+            {isToggled ? (
+              <img src={arrowRight}></img>
+            ) : (
+              <img src={arrowleft}></img>
+            )}
+          </span>
           <div className="container-touchID">
             <span
               style={{ userSelect: "none" }}
@@ -90,9 +105,24 @@ const Navigation = () => {
           </nav>
         </div>
       </section>
+
       <MainContainer>
-        <Outlet />
-        <Footer />
+        <p style={{ margin: "0" }}>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti ex
+          officiis voluptatem quisquam, est sunt doloribus cupiditate
+          perferendis aperiam nostrum magni. Impedit quasi doloremque
+          perspiciatis iure optio iste ipsa earum omnis ad delectus hic,
+          exercitationem tenetur, possimus voluptates ullam at corporis! Nisi
+          quod voluptate facere numquam, aliquid similique explicabo quae
+          doloribus cumque rerum voluptatum dolorem, repellat error minus quia
+          fugit, at sed sequi? Corrupti, doloribus vitae cumque molestiae ea
+          voluptates voluptatem obcaecati reprehenderit deleniti eaque sit iure
+          corporis amet. Obcaecati omnis odio beatae officiis corrupti incidunt
+          harum fugiat facere, at, commodi, quod illum sed ea numquam illo
+          reprehenderit iste? Cum.
+        </p>
+        {/* <Outlet />
+        <Footer /> */}
       </MainContainer>
     </Fragment>
   );

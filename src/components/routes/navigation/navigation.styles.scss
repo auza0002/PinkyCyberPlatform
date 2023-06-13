@@ -1,11 +1,13 @@
 .container-nav {
   position: absolute;
   padding-top: 2rem;
-
+  background-color: #f8f9fa;
   padding-bottom: 2rem;
   .second-container-nav {
+    position: relative;
     border-right: 1px solid rgba(225, 228, 231, 1);
     height: 90vh;
+    left: initial;
     & .container-touchID {
       display: flex;
       justify-content: center;
@@ -56,6 +58,25 @@
       }
       & .nav-profile {
         margin-top: 2rem;
+      }
+    }
+  }
+  .button-toogle {
+    display: none;
+  }
+  @media only screen and (max-width: 65em) {
+    .second-container-nav {
+      left: -75px;
+      .button-toogle {
+        cursor: pointer;
+        position: absolute;
+        display: unset;
+        z-index: 1000;
+        background-color: rgb(225, 228, 231);
+        right: -30px;
+        top: 3.5rem;
+        padding: 10px;
+        border-radius: 10px;
       }
     }
   }
