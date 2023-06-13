@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-vars */
 // navigation
-
+// responsive design
+import { useState } from "react";
+import arrowleft from "../../../assets/images/arrowLeft.svg";
+import arrowRight from "../../../assets/images/arrowRight.svg";
 import { NavLink, Outlet } from "react-router-dom";
 import { MainContainer } from "../../../style/style";
 import "./navigation.styles.scss";
@@ -33,10 +36,23 @@ const profile = {
   Age: "19",
 };
 const Navigation = () => {
+  const [isToggled, setIsToggled] = useState(true);
   return (
     <Fragment>
-      <section className="container-nav">
+      <section className={`container-nav ${!isToggled ? "active" : ""}`}>
         <div className="second-container-nav">
+          <span
+            className={`button-toogle ${!isToggled ? "active" : ""}}`}
+            onClick={() => {
+              setIsToggled(!isToggled);
+            }}
+          >
+            {isToggled ? (
+              <img src={arrowRight}></img>
+            ) : (
+              <img src={arrowleft}></img>
+            )}
+          </span>
           <div className="container-touchID">
             <span
               style={{ userSelect: "none" }}
@@ -89,6 +105,7 @@ const Navigation = () => {
           </nav>
         </div>
       </section>
+
       <MainContainer>
         <Outlet />
         <Footer />

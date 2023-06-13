@@ -24,4 +24,11 @@
     justify-content: space-between;
     width: 360px;
   }
+  @media only screen and (max-width: 55em) {
+    &.btn-large {
+      display: flex;
+      gap: 1rem;
+      width: fit-content;
+    }
+  }
 }
