@@ -27,9 +27,9 @@ const HeaderComponent = ({ children, links, overview }) => {
         )}
       </div>
       <div className="header-container-logo">
-        <NavLink to="/">
+        <Link to="/">
           <img src={logo} alt="Logo MGRINDER ( MG )" />
-        </NavLink>
+        </Link>
       </div>
     </header>
   );
