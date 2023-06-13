@@ -9,12 +9,12 @@ const MainContainer = styled.main`
   transition: all 0.3s ease;
   @media only screen and (max-width: 65em) {
     margin-left: 4rem;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
   }
   @media only screen and (max-width: 56.25em) {
     margin-left: 2rem;
     margin-right: 2rem;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
   }
 `;
 
