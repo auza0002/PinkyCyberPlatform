@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 // navigation
+// responsive design
 
 import { NavLink, Outlet } from "react-router-dom";
 import { MainContainer } from "../../../style/style";
