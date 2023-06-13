@@ -25,13 +25,15 @@
     nav {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+
       padding: 1rem;
       align-items: center;
       & a {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 56px;
+        height: 56px;
         &:hover {
           & span {
             color: rgba(62, 72, 82, 1);
