@@ -107,22 +107,8 @@ const Navigation = () => {
       </section>
 
       <MainContainer>
-        <p style={{ margin: "0" }}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti ex
-          officiis voluptatem quisquam, est sunt doloribus cupiditate
-          perferendis aperiam nostrum magni. Impedit quasi doloremque
-          perspiciatis iure optio iste ipsa earum omnis ad delectus hic,
-          exercitationem tenetur, possimus voluptates ullam at corporis! Nisi
-          quod voluptate facere numquam, aliquid similique explicabo quae
-          doloribus cumque rerum voluptatum dolorem, repellat error minus quia
-          fugit, at sed sequi? Corrupti, doloribus vitae cumque molestiae ea
-          voluptates voluptatem obcaecati reprehenderit deleniti eaque sit iure
-          corporis amet. Obcaecati omnis odio beatae officiis corrupti incidunt
-          harum fugiat facere, at, commodi, quod illum sed ea numquam illo
-          reprehenderit iste? Cum.
-        </p>
-        {/* <Outlet />
-        <Footer /> */}
+        <Outlet />
+        <Footer />
       </MainContainer>
     </Fragment>
   );
