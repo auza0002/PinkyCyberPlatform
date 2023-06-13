@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import styled from "styled-components";
 
-const MainContainer = styled.div`
+const MainContainer = styled.main`
   margin-left: 8rem;
   margin-right: 8rem;
   padding-top: 2rem;

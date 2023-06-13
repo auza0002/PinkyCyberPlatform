@@ -13,7 +13,13 @@
   cursor: pointer;
   &.btn-success {
     background-color: rgba(15, 181, 174, 1);
+    &:hover,
+    &:focus {
+      transition: all 0.3s ease-in-out;
+      background-color: #139366;
+    }
   }
+
   &.btn-large {
     justify-content: space-between;
     width: 360px;

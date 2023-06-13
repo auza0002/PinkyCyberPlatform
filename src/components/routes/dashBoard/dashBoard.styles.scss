@@ -1,0 +1,25 @@
+.container-information {
+  background: #ffffff;
+  border: 1px solid #e1e4e7;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px 8px 8px;
+  & .container-general-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    div {
+      display: flex;
+      padding-left: 8px;
+      p {
+        max-width: 145px;
+        margin: 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
