@@ -8,6 +8,7 @@ import { styled } from "@mui/material/styles";
 import Badge from "@mui/material/Badge";
 import Avatar from "@mui/material/Avatar";
 import profileWEBP from "../../../assets/images/profile.webp";
+import Footer from "../../footer/footer.component";
 import { Fragment } from "react";
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -90,6 +91,7 @@ const Navigation = () => {
       </section>
       <MainContainer>
         <Outlet />
+        <Footer />
       </MainContainer>
     </Fragment>
   );
