@@ -3,7 +3,7 @@ import "./serverStatus.styles.scss";
 const ServerStatus = ({ status, number, percentage, totalPercentage }) => {
   return (
     <li>
-      <div>
+      <div className="server-div-container">
         <p>Server #{number}</p>
         <span className={`server-status ${status}`}></span>
       </div>

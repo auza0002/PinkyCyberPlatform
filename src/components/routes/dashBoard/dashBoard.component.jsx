@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
 import HeaderComponent from "../../header/header.component";
 import Button from "../../button/button.component";
+import Card from "../../card/card.component";
 import calendarSVG from "../../../assets/images/calendar.svg";
 import flagSVG from "../../../assets/images/flag.svg";
 import flashCirleSVG from "../../../assets/images/flashCircle.svg";
 import shiledSearchSVG from "../../../assets/images/shiledSearch.svg";
 import tickCircle from "../../../assets/images/tickCircle.svg";
-import ticket from "../../../assets/images/ticket.svg";
+import ticketSVG from "../../../assets/images/ticket.svg";
 import ServerStatus from "./serverStatus/serverStatus.component";
 import { Link } from "react-router-dom";
 import "./dashBoard.styles.scss";
@@ -45,6 +46,80 @@ const DashBoard = () => {
       totalPercentage: 100,
     },
   };
+  const cards = [
+    {
+      title: "Overdue payments",
+      priority: false,
+      quantity: 4,
+      icon: ticketSVG,
+      total: 512,
+      status: null,
+      link: "/",
+    },
+    {
+      title: "New trouble tickets",
+      priority: false,
+      quantity: 32,
+      icon: calendarSVG,
+      total: 1536,
+      status: null,
+      link: "/",
+    },
+    {
+      title: "User creation requests",
+      priority: false,
+      quantity: 16,
+      icon: null,
+      total: 240,
+      status: "GREEN",
+      link: "/",
+    },
+    {
+      title: "Expiring licenses",
+      priority: false,
+      quantity: 96,
+      icon: null,
+      total: 2048,
+      status: "RED",
+      link: "/",
+    },
+    {
+      title: "Scans performed",
+      priority: true,
+      quantity: 24,
+      icon: shiledSearchSVG,
+      total: 1024,
+      status: null,
+      link: "/",
+    },
+    {
+      title: "Threats detected",
+      priority: true,
+      quantity: 24,
+      icon: flashCirleSVG,
+      total: 1024,
+      status: null,
+      link: "/",
+    },
+    {
+      title: "Online partners",
+      priority: false,
+      quantity: 20,
+      icon: null,
+      total: 30,
+      status: "RED",
+      link: "/",
+    },
+    {
+      title: "Online SaaS clients",
+      priority: false,
+      quantity: 10,
+      icon: calendarSVG,
+      total: 50,
+      status: null,
+      link: "/",
+    },
+  ];
   return (
     <>
       <HeaderComponent links={""}>DashBoard</HeaderComponent>
@@ -82,6 +157,26 @@ const DashBoard = () => {
           </li>
         </ul>
       </section>
+      <section className="section-style">
+        <ul className="card-container">
+          {cards.map((card, index) => (
+            <>
+              <li>
+                <Card
+                  key={index}
+                  title={card.title}
+                  priority={card.priority}
+                  quantity={card.quantity}
+                  icon={card.icon}
+                  total={card.total}
+                  status={card.status}
+                  link={card.link}
+                />
+              </li>
+            </>
+          ))}
+        </ul>
+      </section>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
         eligendi libero ab reprehenderit ea perspiciatis molestiae voluptates
@@ -95,30 +190,6 @@ const DashBoard = () => {
         provident amet voluptatem labore excepturi nam. Quia maxime nesciunt
         aut, dicta vero quam enim veniam doloribus fugit nostrum quidem neque
         eaque!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
-        natus corporis cumque veniam aliquid voluptate, quo eum consequatur enim
-        accusantium nemo quasi a consectetur pariatur distinctio fuga rem
-        explicabo commodi placeat nulla? Necessitatibus qui repellat molestias,
-        quo voluptate, dicta neque non iusto amet sint rem saepe illum adipisci
-        assumenda! Facilis esse libero distinctio saepe alias minima ab nesciunt
-        illum nobis explicabo. Alias at in praesentium, hic inventore aperiam,
-        minus totam corrupti adipisci delectus vel recusandae deleniti eum,
-        facere assumenda voluptas accusantium nulla. Quas distinctio impedit
-        maxime blanditiis minus, beatae officia iure pariatur quae sed nobis
-        nihil velit porro rem, excepturi libero voluptatem facere itaque
-        similique? Adipisci voluptas voluptatibus sed sint laudantium vero!
-        Necessitatibus ipsa obcaecati aut nostrum incidunt id dolor voluptatum
-        exercitationem dolore natus iusto totam doloribus placeat saepe rem,
-        aliquam enim nesciunt? Praesentium velit rerum quos eum unde omnis,
-        illum ea numquam eos voluptatibus autem eveniet quidem iure quae
-        accusamus voluptatem. Mollitia reprehenderit fuga similique totam
-        dignissimos voluptas ratione nostrum commodi quia, facere animi omnis
-        doloremque accusantium nisi? Aut perferendis beatae, aspernatur eaque
-        accusantium iusto distinctio numquam temporibus nihil atque sit velit
-        eos maiores placeat amet consectetur adipisci nesciunt perspiciatis hic
-        quo modi. Ut at a cum deleniti soluta.
       </p>
     </>
   );

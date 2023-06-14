@@ -84,6 +84,37 @@ a {
   'GRAD' 0,
   'opsz' 48
 }
+ .server-status {
+      position: relative;
+      background: #f0f2f3;
+      border: 2px solid #f0f2f3;
+      border-radius: 6px;
+      width: 20px;
+      height: 20px;
+      &::after {
+        content: " ";
+        border-radius: 50%;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: red;
+        left: 20%;
+        top: 20%;
+      }
+      &.GREEN::after {
+        background: #0fb5ae;
+      }
+      &.YELLOW::after {
+        background: rgba(249, 178, 8, 1);
+      }
+      &.RED::after {
+        background: rgba(234, 56, 41, 1);
+      }
+    }
+.section-style{
+  border-bottom: 1px solid #E1E4E7;
+  padding: 1rem 0;
+margin-bottom: 2rem;
 
-
+}
 `;
